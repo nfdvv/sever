@@ -1,0 +1,307 @@
+@import '_vars';
+@import '_global';
+@import '_fonts';
+
+// start header
+
+.header{
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.header__logo{
+  margin-right: -40px;
+}
+.header__catalog{
+  margin-right: -76px;
+}
+.header__input{
+  margin-right: -55px;
+}
+.header__list{
+  margin-right: -40px;
+}
+.header__inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+  &-item{
+    
+  }
+  &-form{
+  }
+  &-input{
+    padding: 10px 35px 10px 15px;
+    border: 1px solid #70C05B;
+    border-radius: 4px;
+    outline: none;
+    width: 300px;
+    &::placeholder{
+      color: #8F8F8F;
+    }
+  }
+  &-search{
+    border: none;
+    background-color: inherit;
+    position: relative;
+    cursor: pointer;
+    &::before{
+      content: '';
+      background-image: url('../images/icons/search.svg');
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      right: 25px;
+      top: -16px;
+    }
+  }
+  &-list{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 27px;
+    & li{
+      font-size: 12px;
+      position: relative;
+    }
+    & li + li{
+      margin-left: 24px;
+    }
+    .favorites::before{
+      content: '';
+      background-image: url('../images/icons/favorites.svg');
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      top: -24px;
+      right: 17px;
+      cursor: pointer;
+    }
+    .orders::before{
+      content: '';
+      background-image: url('../images/icons/orders.svg');
+      position: absolute;
+      width: 25px;
+      height: 24px;
+      top: -24px;
+      right: 7px;
+      cursor: pointer;
+    }
+    .basket.items::after{
+      content: "1";
+      position: absolute;
+      background-color: #f63;
+      color: #fff;
+      border-radius: 5px;
+      text-align: center;
+      top: -30px;
+      width: 14px;
+      font-size: 10px;
+      right: 10px;
+      line-height: 14px;
+      cursor: pointer;
+    }
+    .basket::before{
+      content: '';
+      background-image: url('../images/icons/basket.svg');
+      position: absolute;
+      width: 25px;
+      height: 24px;
+      top: -24px;
+      right: 11px;
+      cursor: pointer;
+    }
+  }
+  &-user{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .user-name{
+      padding: 0 57px 0 10px;
+      @include f700;
+      position: relative;
+      cursor: pointer;
+      &::after{
+        content: '';
+        background-image: url('../images/icons/down.svg');
+        position: absolute;
+        width: 13px;
+        height: 7px;
+        top: 9px;
+        right: 0;
+      }
+    }
+  }
+}
+.header__catalog-btn{
+  background-color: $green;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 150%;
+  padding: 8px 24px 8px 55px;
+  cursor: pointer;
+  position: relative;
+  &::before{
+    content: '';
+    background-image: url('../images/catalog-row.svg');
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 8px;
+  }
+}
+
+// end header
+//start lists
+.lists{
+  background-color: $bg;
+}
+.banner{
+  &__link{
+    display: flex;
+    justify-content: center;
+    padding-top: 4px;
+  }
+}
+.action__title{
+  padding-bottom: 45px;
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  &-link{
+    padding-right: 45px;
+    font-size: 16px;
+    color: #606060;
+    position: relative;
+    &::after{
+      content: '';
+      background-image: url('../images/icons/right.svg');
+      position: absolute;
+      width: 7px;
+      height: 13px;
+      top: 5px;
+      right: 0;
+    }
+  }
+}
+.action__inner{
+  padding-bottom: 120px;
+}
+.product__wrapper{
+  display: flex;
+  justify-content: space-between;
+  &-item{
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    width: 272px;
+    height: 368px;
+    background-color: #fff;
+    position: realtive;
+  }
+  &-price{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8px;
+    &__cart{
+      width: 70px;
+      position: relative;
+      & span{
+        @include f700;
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+      &::before{
+        content: '-50%';
+        position: absolute;
+        left: 0;
+        bottom: 62px;
+        background-color: $orange;
+        border-radius: 4px;
+        color: #fff;
+        font-size: 16px;
+        width: 56px;
+        text-align: center;
+        line-height: 32px;
+      }
+      & p{
+        font-size: 12px;
+        @include f400;
+        color: #BFBFBF;
+      }
+    }
+    &__nocart{
+      & span{
+        font-size: 16px;
+        color: #606060;
+      }
+      & p{
+        font-size: 12px;
+        color: #BFBFBF;
+      }
+    }
+  }
+  &-info{
+    padding: 10px 8px 0;
+    font-size: 16px;
+    width: 215px;
+    margin-bottom: 10px;
+  }
+  &-btn{
+    font-size: 16px;
+    color: $green;
+    background-color: #fff;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    padding: 10px 90px;
+    border: 1px solid #70C05B;
+    border-radius: 4px;
+    margin: 10px auto 0;
+    transition: all .3s;
+    &:hover{
+      background-color: $orange;
+      border: 1px solid $orange;
+      color: #fff;
+    }
+  }
+  &-img{
+    margin-top: 8px;
+  }
+  &-favorite{
+    border: none;
+    background-color: inherit;
+    position: absolute;
+    &::after{
+      content: '';
+      background-image: url('../images/icons/heart.svg');
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #F3F2F1;
+      border-radius: 4px;
+      // opacity: 0.5;
+      left: 232px;
+      top: 8px;
+      cursor: pointer;
+    }
+  }
+  &-favorite--active{
+    border: none;
+    background-color: inherit;
+    position: absolute;
+    &::after{
+      content: '';
+      background-image: url('../images/icons/heart-orange.svg');
+    }
+  }
+}
+.jq-ry-container>.jq-ry-group-wrapper{
+  cursor: pointer;
+}
+// end lists

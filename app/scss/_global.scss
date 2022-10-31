@@ -5,10 +5,11 @@ html{
 *::before,
 *::after{
   box-sizing: inherit;
+  margin: 0;
 }
 a{
   text-decoration: none;
-  color: inherit;
+  color: $black;
   display: inline-block;
 }
 ul,
@@ -31,4 +32,8 @@ body{
   max-width: 1230px;
   padding: 0 15px;
   margin: 0 auto;
+}
+.title{
+  @include f700;
+  font-size: 36px;
 }
