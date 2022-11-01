@@ -304,4 +304,51 @@
 .jq-ry-container>.jq-ry-group-wrapper{
   cursor: pointer;
 }
+
+
 // end lists
+// start new
+
+.new{
+  background-color: $bg;
+}
+.new__title{
+  padding-bottom: 45px;
+  padding-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  &-link{
+    padding-right: 45px;
+    font-size: 16px;
+    color: #606060;
+    position: relative;
+    &::after{
+      content: '';
+      background-image: url('../images/icons/right.svg');
+      position: absolute;
+      width: 7px;
+      height: 13px;
+      top: 5px;
+      right: 0;
+    }
+  }
+}
+.new__inner{
+  padding-bottom: 120px;
+}
+.product__wrapper{
+  .cart-action{
+    &::before{
+      display: none;
+    }
+  }
+}
+
+//end new
+//start above
+
+
+
+
+
+// end above
