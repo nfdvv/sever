@@ -24,11 +24,6 @@
   justify-content: space-between;
   align-items: center;
   height: 72px;
-  &-item{
-    
-  }
-  &-form{
-  }
   &-input{
     padding: 10px 35px 10px 15px;
     border: 1px solid #70C05B;
@@ -187,8 +182,6 @@
     }
   }
 }
-.action__inner{
-}
 .product__wrapper{
   display: flex;
   justify-content: space-between;
@@ -332,8 +325,6 @@
     }
   }
 }
-.new__inner{
-}
 .product__wrapper{
   .cart-action{
     &::before{
@@ -368,8 +359,6 @@
       right: 0;
     }
   }
-}
-.above__inner{
 }
 .product__wrapper{
   .cart-action{
@@ -461,3 +450,34 @@
 
 
 // end offer
+// start map
+.map{
+  background-color: $bg;
+  &__title{
+    margin-bottom: 40px;
+  }
+  &__box{
+    margin-bottom: 25px;
+    &-item{
+      margin-right: 25px;
+      background-color: #F3F2F1;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      &.map__box-item--active{
+        background-color: #70C05B;
+        color: #fff;
+      }
+    }
+  }
+}
+.max__box-map__item{
+  display: none;
+}
+.max__box-map__item.max__box-map__item--active{
+  display: block;
+}
+
+// map end
