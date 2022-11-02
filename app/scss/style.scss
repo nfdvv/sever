@@ -563,3 +563,49 @@
 
 
 // end articles
+// start footer
+
+.footer{
+  background-color: #F9F4E2;
+  background-image: url('../images/footer-bg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 125px;
+  &__list{
+    &-item{
+      font-size: 12px;
+      line-height: 18px;
+    }
+    &-item + &-item{
+      margin-left: 40px;
+    }
+  }
+  &__social{
+    &-link + &-link{
+      margin-left: 18px;
+    }
+  }
+  &__phone{
+    position: relative;
+    padding-left: 35px;
+    &::before{
+      content: '';
+      background-image: url('../images/icons/phone.svg');
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+.footer__inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 25px;
+}
+
+
+// end footer
